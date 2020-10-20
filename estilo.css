@@ -1,0 +1,366 @@
+/*Sobre la cabecera*/
+#colorNav {
+    background-color: black;
+}
+
+.cabecera {   
+    display: flex;
+    justify-content: space-evenly;
+    background-image: url(guemil.jpg);
+    background-repeat: repeat-x;
+    background-size: contain; 
+}
+
+.medidasLogoCabezera {
+    align-self: center;
+    max-width: 100px;
+    max-height: 100px;
+}
+/*Fin cabecera*/
+
+
+/*Estilo general de la página*/
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.colorFondo {                       /*Por alguna razón ya no me lo tomaba como valido al tag del body*/
+    background-color: #b07f55;
+}
+.titulos {
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    animation-duration: 2s;
+    animation-name: aparecer;
+}
+
+.apareciendo {
+    animation-duration: 3s;
+    animation-name: aparecer;
+}
+/*Fin de Estilo general*/
+
+
+/*Sobre Home*/
+
+#CuadradosDeLinks {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 10vh 25vw 10vh 25vw;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+.CuadradoDeLinkHijo1 {
+    display: flex;
+    align-self: center;
+    justify-self: center;
+    background-image: url(cuadrado-1.jpg);
+    transition: background-image 2s ease-out 1s;
+    background-size: cover;
+}
+.CuadradoDeLinkHijo1:hover {
+    background-image: url(blog.png);
+    transition: background-image 2s ease-out 0s;
+
+}
+
+.CuadradoDeLinkHijo2 {
+    display: flex;
+    align-self: center;
+    justify-self: center;
+    background-image: url(cuadrado-2.jpg);
+    transition: background-image 2s;
+    background-size: cover;
+}
+.CuadradoDeLinkHijo2:hover {
+    background-image: url(archivo-fotografico.png);
+}
+.CuadradoDeLinkHijo3 {
+    display: flex;
+    align-self: center;
+    justify-self: center;
+    background-image: url(cuadrado-3.jpg);
+    transition: background-image 2s;
+    background-size: cover;
+
+}
+.CuadradoDeLinkHijo3:hover {
+    background-image: url(proyectos.png); /*Le pifie a la imagen, deberia decir proximas actividades*/
+}
+.CuadradoDeLinkHijo4 {
+    display: flex;
+    align-self: center;
+    justify-self: center;
+    background-image: url(cuadrado-4.jpg);
+    transition: background-image 2s;
+    background-size: cover;
+}
+.CuadradoDeLinkHijo4:hover {
+    
+    background-image: url(Recurso-educativo.png);
+}
+
+.imagenCuadrada {
+    max-width: 320px;
+    max-height: 320px;
+    border: solid 3px black;
+}
+/*FIN HOME*/
+
+
+/*Footer en todas las páginas*/
+#footer {
+    background-image:linear-gradient(#b07f55, rgb(15, 15, 15));
+}
+.listaFooterColumnaIzq {
+    display: inline-block;
+    font-size: 15px;
+    line-height-step: 1.6px;
+    list-style-position: inside;
+    list-style-type: none;
+    text-align: right;
+}
+.listaFooterColumnaDer {
+    font-size: 15px;
+    line-height-step: 1.6px;
+    list-style-position: inside;
+    list-style-type: none;
+}
+.alineamientoListaIzq {
+    text-align: center;
+}
+.alineamientoListaDer {
+    text-align: center;
+}
+
+.logoYRedes {
+    display: flex;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+    justify-items: center;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.logo {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.medidasLogoFooter {
+    max-width: 30%;
+    max-height: 20%;
+}
+.redes {
+    display: inline;
+    margin: 3px;
+}
+
+.iconosRRSS {
+    max-width: 25px;
+    max-height: 25px;
+}
+
+
+@media (min-width: 992px) {
+    .alineamientoListaIzq {
+        text-align: right;
+    }
+    .alineamientoListaDer {
+        text-align: left;
+    }
+}
+/*Fin Footer*/
+
+
+/*Animaciones*/
+@keyframes aparecer { /*Se que parece que estoy copiando, pero es justo lo que queria :(*/
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 100%;
+    }
+}
+/*Fin animaciones*/
+
+/*Sección en Proyectos*/
+
+.tablaProyecto {
+    width: 49%;
+    height: 40%;
+}
+.btn-algo {                       /*Por alguna razón ya no me lo tomaba como valido al tag del body*/
+    background-color: #393736bf !important;
+}
+
+p.fechaActividad {
+    font-weight: bold;
+    line-height: 1.5;
+}
+.proxActCalenda {
+    border: solid black 3px;
+    background: wheat;
+    padding: 2% 2% 2% 2%;
+}
+/*FIN SECCION PROYECTOS*/
+
+/*Seccion en publicaciones*/
+#GridPublicaciones {
+display: grid;
+grid-template-columns: 1fr 3fr 1fr;
+grid-template-rows: 3fr 2fr 2fr 2fr 2fr;
+grid-template-areas:
+"blog blog blog"
+"articulos articulos ."
+". capitulos capitulos"
+"ponencia ponencia ."
+". notas notas";
+row-gap: 35px;
+column-gap: 7px; }
+
+section#blog {
+grid-area: blog;
+display: flex;
+flex-wrap: wrap;
+flex-direction: column;
+align-items: center;
+justify-content: center; }
+
+#GridPublicaciones ul {
+list-style-type: none;
+text-align: center; }
+
+section .capitulos {
+grid-area: capitulos;
+display: flex;
+flex-direction: column;
+justify-items: flex-end;
+padding-left: 5%;
+border-radius: 15px;
+background-color: #28874e;
+align-items: flex-start; }
+
+section .notas {
+grid-area: notas;
+display: flex;
+flex-direction: column;
+justify-items: flex-end;
+padding-left: 5%;
+border-radius: 15px;
+background-color: #28874e;
+align-items: flex-start; }
+
+section .ponencia {
+grid-area: ponencia;
+display: flex;
+flex-direction: column;
+justify-items: flex-end;
+padding-left: 5%;
+border-radius: 15px;
+background-color: #af4937;
+align-items: flex-end; }
+
+section .articulos {
+grid-area: articulos;
+display: flex;
+flex-direction: column;
+justify-items: flex-end;
+padding-left: 5%;
+border-radius: 15px;
+background-color: #af4937;
+align-items: flex-end; }
+
+.botonasoAlBlog {
+/*La idea seria centrarlo y jugar con el margen y el padding. 
+    Lo pateo para futuras desafios eso - ES 24/9 Y TODAVIA LO SIGO PATEANDO*/
+text-align: center;
+border: 2px solid black;
+border-radius: 25px;
+color: white;
+background: none;
+transition: all 2s;
+width: 10%;
+height: 7%; }
+
+.botonasoAlBlog:hover {
+color: black;
+background: white;
+width: 20%;
+height: 14%; }
+
+.listasDePublicaciones {
+list-style-image: url("pdf-icono.png");
+list-style-position: outside;
+color: black;
+font-family: 'Roboto Mono', monospace;
+text-decoration: underline;
+line-height: 1.5;
+text-align: right; }
+
+/*FIN PUBLICACIONES*/
+
+/*Seccion AUDIOVISUALES*/
+#GridAudiovisual {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 3fr 2fr 3fr 2fr 1fr;
+    grid-template-areas: 
+    "header"
+    "visualVideo"
+    "tablaVideo"
+    "visualFotos"
+    "tablaFotos"
+    "footer ";
+    row-gap: 50px;
+    column-gap: 7px;
+    align-content: center;
+    justify-content: center;
+}
+section#VisualVideo {
+    grid-area: visualVideo;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+section#TablaDeVideos {
+    grid-area: tablaVideo;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+section#VisualFotos {
+    grid-area: visualFotos;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+section#TablaDeFotos {
+    grid-area: tablaFotos;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*FIN AUDIOVISUALES*/
+
+/*Sección Quienes Somos*/
+/*Todo es bootstrap!*/
+/*FIN QUIENES SOMOS*/
+
+
+
+/*Animaciones*/
+@keyframes aparecer { /*Se que parece que estoy copiando, pero es justo lo que queria :(*/
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 100%;
+    }
+}
